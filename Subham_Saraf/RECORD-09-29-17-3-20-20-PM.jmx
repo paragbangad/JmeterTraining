@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.4" jmeter="2.9-SNAPSHOT.20130701">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="RECORD 09/29/17 3:20:20 PM" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter JSON to JMX convertor V.1.5.270. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1363247040000</longProp>
+        <longProp name="ThreadGroup.end_time">1363247040000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://github.com/login" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">github.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">login</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">true</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">2</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://github.com/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="RandomTimer.range">0.0</stringProp>
+            <stringProp name="ConstantTimer.delay">0.0</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.github.com/_private/browser/stats" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;stats&quot;:[{&quot;features&quot;:{&quot;beacon&quot;:true,&quot;classlist&quot;:true,&quot;classlistMultiArg&quot;:true,&quot;closest&quot;:true,&quot;customElements&quot;:true,&quot;customEvent&quot;:true,&quot;emojiUnicodeVersion&quot;:10.2,&quot;fetch&quot;:true,&quot;highResolutionTime&quot;:true,&quot;matchesSelector&quot;:true,&quot;promises&quot;:true,&quot;stringEndsWith&quot;:true,&quot;stringStartsWith&quot;:true,&quot;timezone&quot;:true,&quot;url&quot;:true,&quot;urlSearchParams&quot;:true,&quot;userTimingEntries&quot;:true,&quot;userTimingMark&quot;:true,&quot;weakmap&quot;:true}},{&quot;resourceTimings&quot;:[{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1068.3100000000002,&quot;domainLookupStart&quot;:1068.3100000000002,&quot;domainLookupEnd&quot;:1068.3100000000002,&quot;connectStart&quot;:1068.3100000000002,&quot;connectEnd&quot;:1068.3100000000002,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1072.75,&quot;responseStart&quot;:1138.275,&quot;responseEnd&quot;:1141.8750000000002,&quot;transferSize&quot;:24394,&quot;encodedBodySize&quot;:23740,&quot;decodedBodySize&quot;:121094,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/frameworks-bedfc518345498ab3204d330c1727cde7e733526a09cd7df6867f6a231565091.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1068.3100000000002,&quot;duration&quot;:73.56500000000005},{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1068.515,&quot;domainLookupStart&quot;:1068.515,&quot;domainLookupEnd&quot;:1068.515,&quot;connectStart&quot;:1068.515,&quot;connectEnd&quot;:1068.515,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1142.3450000000003,&quot;responseStart&quot;:1241.43,&quot;responseEnd&quot;:1257.66,&quot;transferSize&quot;:96314,&quot;encodedBodySize&quot;:95663,&quot;decodedBodySize&quot;:408993,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/github-63a53e9762b0d5d8d4f52e5ed8855df0850a00402ac6543862a93f50691230c8.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1068.515,&quot;duration&quot;:189.14499999999998},{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1068.69,&quot;domainLookupStart&quot;:1068.69,&quot;domainLookupEnd&quot;:1068.69,&quot;connectStart&quot;:1068.69,&quot;connectEnd&quot;:1068.69,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1258.18,&quot;responseStart&quot;:1341.67,&quot;responseEnd&quot;:1343.3050000000003,&quot;transferSize&quot;:9017,&quot;encodedBodySize&quot;:8365,&quot;decodedBodySize&quot;:37501,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/site-877643c520258c4fa15ac8d1664d84efd0e3db56f5e544ccac58da0e50489904.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1068.69,&quot;duration&quot;:274.61500000000024},{&quot;initiatorType&quot;:&quot;script&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1068.87,&quot;domainLookupStart&quot;:1073.295,&quot;domainLookupEnd&quot;:1073.3000000000002,&quot;connectStart&quot;:1073.3000000000002,&quot;connectEnd&quot;:1263.025,&quot;secureConnectionStart&quot;:1144.5800000000002,&quot;requestStart&quot;:1267.635,&quot;responseStart&quot;:1351.7800000000002,&quot;responseEnd&quot;:1634.38,&quot;transferSize&quot;:93332,&quot;encodedBodySize&quot;:92665,&quot;decodedBodySize&quot;:256473,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/frameworks-73353845059b604494bd29bc913b29ac45035dc2b0e14f9f9a12987fae52af59.js&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1068.87,&quot;duration&quot;:565.5100000000002},{&quot;initiatorType&quot;:&quot;script&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1069.055,&quot;domainLookupStart&quot;:1069.055,&quot;domainLookupEnd&quot;:1069.055,&quot;connectStart&quot;:1069.055,&quot;connectEnd&quot;:1069.055,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1346.77,&quot;responseStart&quot;:1423.285,&quot;responseEnd&quot;:1527.0700000000002,&quot;transferSize&quot;:190700,&quot;encodedBodySize&quot;:190031,&quot;decodedBodySize&quot;:644963,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/github-025672a52b980b3949e8952ccb1d1badad756e42ad42fca6a1a0002365a43c45.js&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1069.055,&quot;duration&quot;:458.0150000000001},{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1072.835,&quot;domainLookupStart&quot;:1072.835,&quot;domainLookupEnd&quot;:1072.835,&quot;connectStart&quot;:1072.835,&quot;connectEnd&quot;:1072.835,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1077.2050000000002,&quot;responseStart&quot;:1142.0700000000002,&quot;responseEnd&quot;:1142.965,&quot;transferSize&quot;:0,&quot;encodedBodySize&quot;:23740,&quot;decodedBodySize&quot;:121094,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/frameworks-bedfc518345498ab3204d330c1727cde7e733526a09cd7df6867f6a231565091.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1072.835,&quot;duration&quot;:70.12999999999988},{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1073.21,&quot;domainLookupStart&quot;:1073.21,&quot;domainLookupEnd&quot;:1073.21,&quot;connectStart&quot;:1073.21,&quot;connectEnd&quot;:1073.21,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1077.41,&quot;responseStart&quot;:1257.8700000000001,&quot;responseEnd&quot;:1260.1650000000002,&quot;transferSize&quot;:0,&quot;encodedBodySize&quot;:95663,&quot;decodedBodySize&quot;:408993,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/github-63a53e9762b0d5d8d4f52e5ed8855df0850a00402ac6543862a93f50691230c8.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1073.21,&quot;duration&quot;:186.95500000000015},{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1073.8300000000002,&quot;domainLookupStart&quot;:1073.8300000000002,&quot;domainLookupEnd&quot;:1073.8300000000002,&quot;connectStart&quot;:1073.8300000000002,&quot;connectEnd&quot;:1073.8300000000002,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1077.5750000000003,&quot;responseStart&quot;:1343.5700000000002,&quot;responseEnd&quot;:1344.6200000000001,&quot;transferSize&quot;:0,&quot;encodedBodySize&quot;:8365,&quot;decodedBodySize&quot;:37501,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/site-877643c520258c4fa15ac8d1664d84efd0e3db56f5e544ccac58da0e50489904.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1073.8300000000002,&quot;duration&quot;:270.78999999999996},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1819.9850000000001,&quot;domainLookupStart&quot;:0,&quot;domainLookupEnd&quot;:0,&quot;connectStart&quot;:0,&quot;connectEnd&quot;:0,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:0,&quot;responseStart&quot;:0,&quot;responseEnd&quot;:2034.5800000000002,&quot;transferSize&quot;:0,&quot;encodedBodySize&quot;:0,&quot;decodedBodySize&quot;:0,&quot;name&quot;:&quot;https://collector.githubapp.com/github/page_view?dimensions[page]=https://github.com/login&amp;dimensions[title]=Sign in to GitHub · GitHub&amp;dimensions[referrer]=https://github.com/&amp;dimensions[user_agent]=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36&amp;dimensions[screen_resolution]=1680x1050&amp;dimensions[pixel_ratio]=1&amp;dimensions[browser_resolution]=1680x944&amp;dimensions[tz_seconds]=19800&amp;dimensions[timestamp]=1506678626960&amp;dimensions[request_id]=E1E4:8853:A792A45:FEBF79F:59CE1761&amp;dimensions[region_edge]=sea&amp;dimensions[region_render]=iad&amp;&amp;measures[performance_timing]=1-677-4--1718-1717-1717-1066-4-4-2---0---698-1057-1053-411-1058-1058&amp;&amp;&amp;dimensions[cid]=510108878.1505741121&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1819.9850000000001,&quot;duration&quot;:214.59500000000003},{&quot;initiatorType&quot;:&quot;beacon&quot;,&quot;nextHopProtocol&quot;:&quot;h2&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1838.9950000000001,&quot;domainLookupStart&quot;:0,&quot;domainLookupEnd&quot;:0,&quot;connectStart&quot;:0,&quot;connectEnd&quot;:0,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:0,&quot;responseStart&quot;:0,&quot;responseEnd&quot;:1944.8400000000001,&quot;transferSize&quot;:0,&quot;encodedBodySize&quot;:0,&quot;decodedBodySize&quot;:0,&quot;name&quot;:&quot;https://www.google-analytics.com/collect&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1838.9950000000001,&quot;duration&quot;:105.84500000000003}]},{&quot;navigationTimings&quot;:[{&quot;unloadEventStart&quot;:1057.7150000000001,&quot;unloadEventEnd&quot;:1057.7150000000001,&quot;domInteractive&quot;:1716.2150000000001,&quot;domContentLoadedEventStart&quot;:1716.2600000000002,&quot;domContentLoadedEventEnd&quot;:1717.88,&quot;domComplete&quot;:2034.9950000000003,&quot;loadEventStart&quot;:2035.0200000000002,&quot;loadEventEnd&quot;:2036.0150000000003,&quot;type&quot;:&quot;reload&quot;,&quot;redirectCount&quot;:0,&quot;initiatorType&quot;:&quot;navigation&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1.5650000000000002,&quot;domainLookupStart&quot;:3.45,&quot;domainLookupEnd&quot;:3.45,&quot;connectStart&quot;:3.45,&quot;connectEnd&quot;:676.505,&quot;secureConnectionStart&quot;:410.415,&quot;requestStart&quot;:697.76,&quot;responseStart&quot;:1052.545,&quot;responseEnd&quot;:1056.4600000000003,&quot;transferSize&quot;:14476,&quot;encodedBodySize&quot;:12002,&quot;decodedBodySize&quot;:12002,&quot;name&quot;:&quot;https://github.com/login&quot;,&quot;entryType&quot;:&quot;navigation&quot;,&quot;startTime&quot;:0,&quot;duration&quot;:2036.0150000000003}]}]}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">api.github.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">_private/browser/stats</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">true</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">2</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://github.com</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://github.com/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="RandomTimer.range">712.4000000000001</stringProp>
+            <stringProp name="ConstantTimer.delay">1424.8000000000002</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://github.com/session" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="commit" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">commit</stringProp>
+                <stringProp name="Argument.value">Sign in</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="password" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">password</stringProp>
+                <stringProp name="Argument.value">${password}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="login" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">login</stringProp>
+                <stringProp name="Argument.value">${username}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="utf8" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">utf8</stringProp>
+                <stringProp name="Argument.value">✓</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="authenticity_token" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">authenticity_token</stringProp>
+                <stringProp name="Argument.value">D0yHGCSZz/sDE5xjRYEqVn5JdHzKO58CbKUAE1qhQjDHLr/uiv64T7DTCs4/TzR4S/hV6K/OwGEs3S+UNHFSPw==</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">github.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">session</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">true</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">2</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://github.com</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://github.com/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="RandomTimer.range">992.4000000000001</stringProp>
+            <stringProp name="ConstantTimer.delay">1984.8000000000002</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://github.com/" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">github.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">true</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">2</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://github.com/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="RandomTimer.range">164.8</stringProp>
+            <stringProp name="ConstantTimer.delay">329.6</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.github.com/_private/browser/stats" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;stats&quot;:[{&quot;features&quot;:{&quot;beacon&quot;:true,&quot;classlist&quot;:true,&quot;classlistMultiArg&quot;:true,&quot;closest&quot;:true,&quot;customElements&quot;:true,&quot;customEvent&quot;:true,&quot;emojiUnicodeVersion&quot;:10.2,&quot;fetch&quot;:true,&quot;highResolutionTime&quot;:true,&quot;matchesSelector&quot;:true,&quot;promises&quot;:true,&quot;stringEndsWith&quot;:true,&quot;stringStartsWith&quot;:true,&quot;timezone&quot;:true,&quot;url&quot;:true,&quot;urlSearchParams&quot;:true,&quot;userTimingEntries&quot;:true,&quot;userTimingMark&quot;:true,&quot;weakmap&quot;:true}},{&quot;resourceTimings&quot;:[{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1064.2,&quot;domainLookupStart&quot;:1064.2,&quot;domainLookupEnd&quot;:1064.2,&quot;connectStart&quot;:1064.2,&quot;connectEnd&quot;:1064.2,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1068.0400000000002,&quot;responseStart&quot;:1151.47,&quot;responseEnd&quot;:1175.15,&quot;transferSize&quot;:24395,&quot;encodedBodySize&quot;:23740,&quot;decodedBodySize&quot;:121094,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/frameworks-bedfc518345498ab3204d330c1727cde7e733526a09cd7df6867f6a231565091.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1064.2,&quot;duration&quot;:110.95000000000005},{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1064.525,&quot;domainLookupStart&quot;:1064.525,&quot;domainLookupEnd&quot;:1064.525,&quot;connectStart&quot;:1064.525,&quot;connectEnd&quot;:1064.525,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1068.4450000000002,&quot;responseStart&quot;:1133.7050000000002,&quot;responseEnd&quot;:1149.145,&quot;transferSize&quot;:96314,&quot;encodedBodySize&quot;:95663,&quot;decodedBodySize&quot;:408993,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/github-63a53e9762b0d5d8d4f52e5ed8855df0850a00402ac6543862a93f50691230c8.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1064.525,&quot;duration&quot;:84.61999999999989},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1065.2350000000001,&quot;domainLookupStart&quot;:1065.2350000000001,&quot;domainLookupEnd&quot;:1065.2350000000001,&quot;connectStart&quot;:1065.2350000000001,&quot;connectEnd&quot;:1065.2350000000001,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1178.825,&quot;responseStart&quot;:1247.4050000000002,&quot;responseEnd&quot;:1248.04,&quot;transferSize&quot;:2425,&quot;encodedBodySize&quot;:1563,&quot;decodedBodySize&quot;:1563,&quot;name&quot;:&quot;https://avatars0.githubusercontent.com/u/29939871?v=4&amp;s=40&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1065.2350000000001,&quot;duration&quot;:182.80499999999984},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1065.505,&quot;domainLookupStart&quot;:1065.505,&quot;domainLookupEnd&quot;:1065.505,&quot;connectStart&quot;:1065.505,&quot;connectEnd&quot;:1065.505,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1179.2150000000001,&quot;responseStart&quot;:1249.9250000000002,&quot;responseEnd&quot;:1250.6050000000002,&quot;transferSize&quot;:2353,&quot;encodedBodySize&quot;:1491,&quot;decodedBodySize&quot;:1491,&quot;name&quot;:&quot;https://avatars2.githubusercontent.com/u/30416054?v=4&amp;s=40&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1065.505,&quot;duration&quot;:185.10000000000014},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1065.955,&quot;domainLookupStart&quot;:1065.955,&quot;domainLookupEnd&quot;:1065.955,&quot;connectStart&quot;:1065.955,&quot;connectEnd&quot;:1065.955,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1179.315,&quot;responseStart&quot;:1251.02,&quot;responseEnd&quot;:1253.6850000000002,&quot;transferSize&quot;:7034,&quot;encodedBodySize&quot;:6423,&quot;decodedBodySize&quot;:6423,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/notices/context_button.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1065.955,&quot;duration&quot;:187.73000000000025},{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1068.7,&quot;domainLookupStart&quot;:1068.7,&quot;domainLookupEnd&quot;:1068.7,&quot;connectStart&quot;:1068.7,&quot;connectEnd&quot;:1068.7,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1070.405,&quot;responseStart&quot;:1175.3700000000001,&quot;responseEnd&quot;:1179.645,&quot;transferSize&quot;:0,&quot;encodedBodySize&quot;:23740,&quot;decodedBodySize&quot;:121094,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/frameworks-bedfc518345498ab3204d330c1727cde7e733526a09cd7df6867f6a231565091.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1068.7,&quot;duration&quot;:110.94499999999994},{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1069.0000000000002,&quot;domainLookupStart&quot;:1069.0000000000002,&quot;domainLookupEnd&quot;:1069.0000000000002,&quot;connectStart&quot;:1069.0000000000002,&quot;connectEnd&quot;:1069.0000000000002,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1070.635,&quot;responseStart&quot;:1149.435,&quot;responseEnd&quot;:1155.63,&quot;transferSize&quot;:0,&quot;encodedBodySize&quot;:95663,&quot;decodedBodySize&quot;:408993,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/github-63a53e9762b0d5d8d4f52e5ed8855df0850a00402ac6543862a93f50691230c8.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1069.0000000000002,&quot;duration&quot;:86.62999999999988},{&quot;initiatorType&quot;:&quot;script&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1307.18,&quot;domainLookupStart&quot;:1307.18,&quot;domainLookupEnd&quot;:1307.18,&quot;connectStart&quot;:1307.18,&quot;connectEnd&quot;:1307.18,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1309.275,&quot;responseStart&quot;:1414.02,&quot;responseEnd&quot;:1604.2500000000002,&quot;transferSize&quot;:93332,&quot;encodedBodySize&quot;:92665,&quot;decodedBodySize&quot;:256473,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/frameworks-73353845059b604494bd29bc913b29ac45035dc2b0e14f9f9a12987fae52af59.js&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1307.18,&quot;duration&quot;:297.07000000000016},{&quot;initiatorType&quot;:&quot;script&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1308.0800000000002,&quot;domainLookupStart&quot;:1308.0800000000002,&quot;domainLookupEnd&quot;:1308.0800000000002,&quot;connectStart&quot;:1308.0800000000002,&quot;connectEnd&quot;:1308.0800000000002,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1309.7850000000003,&quot;responseStart&quot;:1383.745,&quot;responseEnd&quot;:1525.2700000000002,&quot;transferSize&quot;:190700,&quot;encodedBodySize&quot;:190031,&quot;decodedBodySize&quot;:644963,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/github-025672a52b980b3949e8952ccb1d1badad756e42ad42fca6a1a0002365a43c45.js&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1308.0800000000002,&quot;duration&quot;:217.19000000000005},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1714.2250000000001,&quot;domainLookupStart&quot;:0,&quot;domainLookupEnd&quot;:0,&quot;connectStart&quot;:0,&quot;connectEnd&quot;:0,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:0,&quot;responseStart&quot;:0,&quot;responseEnd&quot;:1962.765,&quot;transferSize&quot;:0,&quot;encodedBodySize&quot;:0,&quot;decodedBodySize&quot;:0,&quot;name&quot;:&quot;https://collector.githubapp.com/github/page_view?dimensions[page]=https://github.com/&amp;dimensions[title]=GitHub&amp;dimensions[referrer]=https://github.com/&amp;dimensions[user_agent]=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36&amp;dimensions[screen_resolution]=1680x1050&amp;dimensions[pixel_ratio]=1&amp;dimensions[browser_resolution]=1680x944&amp;dimensions[tz_seconds]=19800&amp;dimensions[timestamp]=1506678631520&amp;dimensions[request_id]=E1E4:8853:A792C00:FEBFA35:59CE1766&amp;dimensions[region_edge]=sea&amp;dimensions[region_render]=iad&amp;&amp;measures[performance_timing]=1-1050-1050--1668-1665-1665-1060-1050-1050-1050---0-1050-2-417-1307-1046--1052-1052&amp;&amp;dimensions[actor_id]=29939871&amp;dimensions[actor_login]=subhamsaraf&amp;dimensions[actor_hash]=a385246ee78b6ff0b0f09eff8db31a5cbe94b5e1852e67c3fea5c36f937374e2&amp;dimensions[cid]=510108878.1505741121&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1714.2250000000001,&quot;duration&quot;:248.53999999999996},{&quot;initiatorType&quot;:&quot;beacon&quot;,&quot;nextHopProtocol&quot;:&quot;h2&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1729.8000000000002,&quot;domainLookupStart&quot;:0,&quot;domainLookupEnd&quot;:0,&quot;connectStart&quot;:0,&quot;connectEnd&quot;:0,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:0,&quot;responseStart&quot;:0,&quot;responseEnd&quot;:1838.8200000000002,&quot;transferSize&quot;:0,&quot;encodedBodySize&quot;:0,&quot;decodedBodySize&quot;:0,&quot;name&quot;:&quot;https://www.google-analytics.com/collect&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1729.8000000000002,&quot;duration&quot;:109.01999999999998}]},{&quot;navigationTimings&quot;:[{&quot;unloadEventStart&quot;:1051.795,&quot;unloadEventEnd&quot;:1051.8000000000002,&quot;domInteractive&quot;:1665.545,&quot;domContentLoadedEventStart&quot;:1665.5900000000001,&quot;domContentLoadedEventEnd&quot;:1668.095,&quot;domComplete&quot;:1963.2300000000002,&quot;loadEventStart&quot;:1963.275,&quot;loadEventEnd&quot;:1964.255,&quot;type&quot;:&quot;navigate&quot;,&quot;redirectCount&quot;:1,&quot;initiatorType&quot;:&quot;navigation&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:2.18,&quot;redirectEnd&quot;:1050.3250000000003,&quot;fetchStart&quot;:1050.3250000000003,&quot;domainLookupStart&quot;:1050.3250000000003,&quot;domainLookupEnd&quot;:1050.3250000000003,&quot;connectStart&quot;:1050.3250000000003,&quot;connectEnd&quot;:1050.3250000000003,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:417.73,&quot;responseStart&quot;:1046.6550000000002,&quot;responseEnd&quot;:1306.9250000000002,&quot;transferSize&quot;:67594,&quot;encodedBodySize&quot;:62159,&quot;decodedBodySize&quot;:62159,&quot;name&quot;:&quot;https://github.com/session&quot;,&quot;entryType&quot;:&quot;navigation&quot;,&quot;startTime&quot;:0,&quot;duration&quot;:1964.255}]}]}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">api.github.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">_private/browser/stats</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">true</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">2</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://github.com</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://github.com/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="RandomTimer.range">632.8000000000001</stringProp>
+            <stringProp name="ConstantTimer.delay">1265.6000000000001</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://github.com/logout" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="utf8" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">utf8</stringProp>
+                <stringProp name="Argument.value">✓</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="authenticity_token" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">authenticity_token</stringProp>
+                <stringProp name="Argument.value">HAjWBZngxXejR1gmK6ilbml7e+JSXMVu3FVTkszhi1f1ET3uv7kJJNi9EpYefcdnbBZhvfXAZl/i4fFR9jbdZw==</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">github.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">logout</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">true</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">2</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://github.com</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://github.com/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="RandomTimer.range">1372.0</stringProp>
+            <stringProp name="ConstantTimer.delay">2744.0</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://github.com/" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">github.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">true</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">2</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://github.com/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="RandomTimer.range">194.0</stringProp>
+            <stringProp name="ConstantTimer.delay">388.0</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://api.github.com/_private/browser/stats" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;stats&quot;:[{&quot;features&quot;:{&quot;beacon&quot;:true,&quot;classlist&quot;:true,&quot;classlistMultiArg&quot;:true,&quot;closest&quot;:true,&quot;customElements&quot;:true,&quot;customEvent&quot;:true,&quot;emojiUnicodeVersion&quot;:10.2,&quot;fetch&quot;:true,&quot;highResolutionTime&quot;:true,&quot;matchesSelector&quot;:true,&quot;promises&quot;:true,&quot;stringEndsWith&quot;:true,&quot;stringStartsWith&quot;:true,&quot;timezone&quot;:true,&quot;url&quot;:true,&quot;urlSearchParams&quot;:true,&quot;userTimingEntries&quot;:true,&quot;userTimingMark&quot;:true,&quot;weakmap&quot;:true}},{&quot;downloadedBundles&quot;:[&quot;site.css&quot;]},{&quot;resourceTimings&quot;:[{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1029.875,&quot;domainLookupStart&quot;:1029.875,&quot;domainLookupEnd&quot;:1029.875,&quot;connectStart&quot;:1029.875,&quot;connectEnd&quot;:1029.875,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1031.625,&quot;responseStart&quot;:1132.44,&quot;responseEnd&quot;:1179.57,&quot;transferSize&quot;:24395,&quot;encodedBodySize&quot;:23740,&quot;decodedBodySize&quot;:121094,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/frameworks-bedfc518345498ab3204d330c1727cde7e733526a09cd7df6867f6a231565091.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1029.875,&quot;duration&quot;:149.69499999999994},{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1030.015,&quot;domainLookupStart&quot;:1030.015,&quot;domainLookupEnd&quot;:1030.015,&quot;connectStart&quot;:1030.015,&quot;connectEnd&quot;:1030.015,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1032.585,&quot;responseStart&quot;:1111.18,&quot;responseEnd&quot;:1128.4150000000002,&quot;transferSize&quot;:96314,&quot;encodedBodySize&quot;:95663,&quot;decodedBodySize&quot;:408993,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/github-63a53e9762b0d5d8d4f52e5ed8855df0850a00402ac6543862a93f50691230c8.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1030.015,&quot;duration&quot;:98.40000000000009},{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1030.1299999999999,&quot;domainLookupStart&quot;:1030.1299999999999,&quot;domainLookupEnd&quot;:1030.1299999999999,&quot;connectStart&quot;:1030.1299999999999,&quot;connectEnd&quot;:1030.1299999999999,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1032.92,&quot;responseStart&quot;:1138.255,&quot;responseEnd&quot;:1232.7800000000002,&quot;transferSize&quot;:9018,&quot;encodedBodySize&quot;:8365,&quot;decodedBodySize&quot;:37501,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/site-877643c520258c4fa15ac8d1664d84efd0e3db56f5e544ccac58da0e50489904.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1030.1299999999999,&quot;duration&quot;:202.65000000000032},{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1031.5500000000002,&quot;domainLookupStart&quot;:1031.5500000000002,&quot;domainLookupEnd&quot;:1031.5500000000002,&quot;connectStart&quot;:1031.5500000000002,&quot;connectEnd&quot;:1031.5500000000002,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1033.665,&quot;responseStart&quot;:1179.84,&quot;responseEnd&quot;:1181.0550000000003,&quot;transferSize&quot;:0,&quot;encodedBodySize&quot;:23740,&quot;decodedBodySize&quot;:121094,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/frameworks-bedfc518345498ab3204d330c1727cde7e733526a09cd7df6867f6a231565091.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1031.5500000000002,&quot;duration&quot;:149.5050000000001},{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1032.255,&quot;domainLookupStart&quot;:1032.255,&quot;domainLookupEnd&quot;:1032.255,&quot;connectStart&quot;:1032.255,&quot;connectEnd&quot;:1032.255,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1033.98,&quot;responseStart&quot;:1128.73,&quot;responseEnd&quot;:1134.8550000000002,&quot;transferSize&quot;:0,&quot;encodedBodySize&quot;:95663,&quot;decodedBodySize&quot;:408993,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/github-63a53e9762b0d5d8d4f52e5ed8855df0850a00402ac6543862a93f50691230c8.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1032.255,&quot;duration&quot;:102.60000000000014},{&quot;initiatorType&quot;:&quot;link&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1032.4450000000002,&quot;domainLookupStart&quot;:1032.4450000000002,&quot;domainLookupEnd&quot;:1032.4450000000002,&quot;connectStart&quot;:1032.4450000000002,&quot;connectEnd&quot;:1032.4450000000002,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1034.645,&quot;responseStart&quot;:1233.095,&quot;responseEnd&quot;:1235,&quot;transferSize&quot;:0,&quot;encodedBodySize&quot;:8365,&quot;decodedBodySize&quot;:37501,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/site-877643c520258c4fa15ac8d1664d84efd0e3db56f5e544ccac58da0e50489904.css&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1032.4450000000002,&quot;duration&quot;:202.55499999999984},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1088.0700000000002,&quot;domainLookupStart&quot;:1088.0700000000002,&quot;domainLookupEnd&quot;:1088.0700000000002,&quot;connectStart&quot;:1088.0700000000002,&quot;connectEnd&quot;:1088.0700000000002,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1237.0500000000002,&quot;responseStart&quot;:1340.4550000000002,&quot;responseEnd&quot;:1376.23,&quot;transferSize&quot;:26763,&quot;encodedBodySize&quot;:26147,&quot;decodedBodySize&quot;:26147,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/universe-octoshop.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1088.0700000000002,&quot;duration&quot;:288.15999999999985},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1088.36,&quot;domainLookupStart&quot;:1088.36,&quot;domainLookupEnd&quot;:1088.36,&quot;connectStart&quot;:1088.36,&quot;connectEnd&quot;:1088.36,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1238.14,&quot;responseStart&quot;:1338.13,&quot;responseEnd&quot;:1343.2400000000002,&quot;transferSize&quot;:9755,&quot;encodedBodySize&quot;:9141,&quot;decodedBodySize&quot;:9141,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/universe-wordmark.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1088.36,&quot;duration&quot;:254.88000000000034},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1088.555,&quot;domainLookupStart&quot;:1088.555,&quot;domainLookupEnd&quot;:1088.555,&quot;connectStart&quot;:1088.555,&quot;connectEnd&quot;:1088.555,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1239.2800000000002,&quot;responseStart&quot;:1344.0700000000002,&quot;responseEnd&quot;:1348.3500000000001,&quot;transferSize&quot;:3090,&quot;encodedBodySize&quot;:2430,&quot;decodedBodySize&quot;:8149,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/home-illo-conversation.svg&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1088.555,&quot;duration&quot;:259.7950000000001},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1088.7450000000001,&quot;domainLookupStart&quot;:1088.7450000000001,&quot;domainLookupEnd&quot;:1088.7450000000001,&quot;connectStart&quot;:1088.7450000000001,&quot;connectEnd&quot;:1088.7450000000001,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1239.6850000000002,&quot;responseStart&quot;:1345.625,&quot;responseEnd&quot;:1351.4950000000001,&quot;transferSize&quot;:5072,&quot;encodedBodySize&quot;:4414,&quot;decodedBodySize&quot;:17216,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/home-illo-chaos.svg&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1088.7450000000001,&quot;duration&quot;:262.75},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1088.91,&quot;domainLookupStart&quot;:1088.91,&quot;domainLookupEnd&quot;:1088.91,&quot;connectStart&quot;:1088.91,&quot;connectEnd&quot;:1088.91,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1240.19,&quot;responseStart&quot;:1341.325,&quot;responseEnd&quot;:1343.42,&quot;transferSize&quot;:2961,&quot;encodedBodySize&quot;:2301,&quot;decodedBodySize&quot;:9265,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/home-illo-business.svg&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1088.91,&quot;duration&quot;:254.51},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1089.085,&quot;domainLookupStart&quot;:1089.085,&quot;domainLookupEnd&quot;:1089.085,&quot;connectStart&quot;:1089.085,&quot;connectEnd&quot;:1089.085,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1240.385,&quot;responseStart&quot;:1349.96,&quot;responseEnd&quot;:1361.5000000000002,&quot;transferSize&quot;:58945,&quot;encodedBodySize&quot;:58329,&quot;decodedBodySize&quot;:58329,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/integrators/slackhq.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1089.085,&quot;duration&quot;:272.4150000000002},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1092.135,&quot;domainLookupStart&quot;:1092.135,&quot;domainLookupEnd&quot;:1092.135,&quot;connectStart&quot;:1092.135,&quot;connectEnd&quot;:1092.135,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1361.3500000000001,&quot;responseStart&quot;:1477.7900000000002,&quot;responseEnd&quot;:1509.97,&quot;transferSize&quot;:1507,&quot;encodedBodySize&quot;:891,&quot;decodedBodySize&quot;:891,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/integrators/zenhubio.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1092.135,&quot;duration&quot;:417.83500000000004},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1092.315,&quot;domainLookupStart&quot;:1092.315,&quot;domainLookupEnd&quot;:1092.315,&quot;connectStart&quot;:1092.315,&quot;connectEnd&quot;:1092.315,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1378.395,&quot;responseStart&quot;:1489.9900000000002,&quot;responseEnd&quot;:1521.47,&quot;transferSize&quot;:25589,&quot;encodedBodySize&quot;:24972,&quot;decodedBodySize&quot;:24972,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/integrators/travis-ci.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1092.315,&quot;duration&quot;:429.155},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1092.4900000000002,&quot;domainLookupStart&quot;:1092.4900000000002,&quot;domainLookupEnd&quot;:1092.4900000000002,&quot;connectStart&quot;:1092.4900000000002,&quot;connectEnd&quot;:1092.4900000000002,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1399.8500000000001,&quot;responseStart&quot;:1507.2850000000003,&quot;responseEnd&quot;:1544.6100000000001,&quot;transferSize&quot;:22693,&quot;encodedBodySize&quot;:22076,&quot;decodedBodySize&quot;:22076,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/integrators/atom.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1092.4900000000002,&quot;duration&quot;:452.1199999999999},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1092.6550000000002,&quot;domainLookupStart&quot;:1092.6550000000002,&quot;domainLookupEnd&quot;:1092.6550000000002,&quot;connectStart&quot;:1092.6550000000002,&quot;connectEnd&quot;:1092.6550000000002,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1431.575,&quot;responseStart&quot;:1536.2950000000003,&quot;responseEnd&quot;:1550.945,&quot;transferSize&quot;:66130,&quot;encodedBodySize&quot;:65515,&quot;decodedBodySize&quot;:65515,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/integrators/circleci.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1092.6550000000002,&quot;duration&quot;:458.28999999999974},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1092.825,&quot;domainLookupStart&quot;:1092.825,&quot;domainLookupEnd&quot;:1092.825,&quot;connectStart&quot;:1092.825,&quot;connectEnd&quot;:1092.825,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1458.5450000000003,&quot;responseStart&quot;:1557.2450000000001,&quot;responseEnd&quot;:1558.1950000000002,&quot;transferSize&quot;:10024,&quot;encodedBodySize&quot;:9408,&quot;decodedBodySize&quot;:9408,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/integrators/codeship.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1092.825,&quot;duration&quot;:465.3700000000001},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1092.9950000000001,&quot;domainLookupStart&quot;:1092.9950000000001,&quot;domainLookupEnd&quot;:1092.9950000000001,&quot;connectStart&quot;:1092.9950000000001,&quot;connectEnd&quot;:1092.9950000000001,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1479.6850000000002,&quot;responseStart&quot;:1573.8750000000002,&quot;responseEnd&quot;:1829.505,&quot;transferSize&quot;:146582,&quot;encodedBodySize&quot;:145965,&quot;decodedBodySize&quot;:145965,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/integrators/codeclimate.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1092.9950000000001,&quot;duration&quot;:736.51},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1093.16,&quot;domainLookupStart&quot;:1093.16,&quot;domainLookupEnd&quot;:1093.16,&quot;connectStart&quot;:1093.16,&quot;connectEnd&quot;:1093.16,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1489.1450000000002,&quot;responseStart&quot;:1584.96,&quot;responseEnd&quot;:1751.9550000000002,&quot;transferSize&quot;:115357,&quot;encodedBodySize&quot;:114744,&quot;decodedBodySize&quot;:114744,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/stories/developers/ariya.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1093.16,&quot;duration&quot;:658.7950000000001},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1093.315,&quot;domainLookupStart&quot;:1093.315,&quot;domainLookupEnd&quot;:1093.315,&quot;connectStart&quot;:1093.315,&quot;connectEnd&quot;:1093.315,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1513.2500000000002,&quot;responseStart&quot;:1613.4,&quot;responseEnd&quot;:1745.0900000000001,&quot;transferSize&quot;:124569,&quot;encodedBodySize&quot;:123956,&quot;decodedBodySize&quot;:123956,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/stories/developers/freakboy3742.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1093.315,&quot;duration&quot;:651.7750000000001},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1093.4750000000001,&quot;domainLookupStart&quot;:1093.4750000000001,&quot;domainLookupEnd&quot;:1093.4750000000001,&quot;connectStart&quot;:1093.4750000000001,&quot;connectEnd&quot;:1093.4750000000001,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1523.595,&quot;responseStart&quot;:1636.47,&quot;responseEnd&quot;:2203.7850000000003,&quot;transferSize&quot;:379282,&quot;encodedBodySize&quot;:378670,&quot;decodedBodySize&quot;:378670,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/stories/customers/mailchimp.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1093.4750000000001,&quot;duration&quot;:1110.3100000000002},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1093.64,&quot;domainLookupStart&quot;:1093.64,&quot;domainLookupEnd&quot;:1093.64,&quot;connectStart&quot;:1093.64,&quot;connectEnd&quot;:1093.64,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1549.0300000000002,&quot;responseStart&quot;:1660.44,&quot;responseEnd&quot;:1662.3450000000003,&quot;transferSize&quot;:29473,&quot;encodedBodySize&quot;:28862,&quot;decodedBodySize&quot;:28862,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/stories/developers/kris-nova.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1093.64,&quot;duration&quot;:568.7050000000002},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1093.795,&quot;domainLookupStart&quot;:1093.795,&quot;domainLookupEnd&quot;:1093.795,&quot;connectStart&quot;:1093.795,&quot;connectEnd&quot;:1093.795,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1559.7,&quot;responseStart&quot;:1667.815,&quot;responseEnd&quot;:1673.3300000000002,&quot;transferSize&quot;:34874,&quot;encodedBodySize&quot;:34263,&quot;decodedBodySize&quot;:34263,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/stories/developers/yyx990803.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1093.795,&quot;duration&quot;:579.5350000000001},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1093.9500000000003,&quot;domainLookupStart&quot;:1093.9500000000003,&quot;domainLookupEnd&quot;:1093.9500000000003,&quot;connectStart&quot;:1093.9500000000003,&quot;connectEnd&quot;:1093.9500000000003,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1663.8050000000003,&quot;responseStart&quot;:1797.29,&quot;responseEnd&quot;:2143.8250000000003,&quot;transferSize&quot;:332380,&quot;encodedBodySize&quot;:331768,&quot;decodedBodySize&quot;:331768,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/stories/customers/mapbox.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1093.9500000000003,&quot;duration&quot;:1049.875},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1094.105,&quot;domainLookupStart&quot;:1094.105,&quot;domainLookupEnd&quot;:1094.105,&quot;connectStart&quot;:1094.105,&quot;connectEnd&quot;:1094.105,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1674.9550000000002,&quot;responseStart&quot;:1814.93,&quot;responseEnd&quot;:1816.375,&quot;transferSize&quot;:14544,&quot;encodedBodySize&quot;:13933,&quot;decodedBodySize&quot;:13933,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/stories/developers/jessfraz.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1094.105,&quot;duration&quot;:722.27},{&quot;initiatorType&quot;:&quot;css&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1260.38,&quot;domainLookupStart&quot;:1260.38,&quot;domainLookupEnd&quot;:1260.38,&quot;connectStart&quot;:1260.38,&quot;connectEnd&quot;:1260.38,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1342.2200000000003,&quot;responseStart&quot;:1456.4,&quot;responseEnd&quot;:1501.4750000000001,&quot;transferSize&quot;:5221,&quot;encodedBodySize&quot;:4564,&quot;decodedBodySize&quot;:26073,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/heroes/simple-codelines.svg&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1260.38,&quot;duration&quot;:241.09500000000003},{&quot;initiatorType&quot;:&quot;css&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1260.6200000000001,&quot;domainLookupStart&quot;:1260.6200000000001,&quot;domainLookupEnd&quot;:1260.6200000000001,&quot;connectStart&quot;:1260.6200000000001,&quot;connectEnd&quot;:1260.6200000000001,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1262.6050000000002,&quot;responseStart&quot;:1378.5850000000003,&quot;responseEnd&quot;:1487.7200000000003,&quot;transferSize&quot;:14006,&quot;encodedBodySize&quot;:13360,&quot;decodedBodySize&quot;:13360,&quot;name&quot;:&quot;https://assets-cdn.github.com/static/fonts/roboto/roboto-light.woff&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1260.6200000000001,&quot;duration&quot;:227.10000000000014},{&quot;initiatorType&quot;:&quot;css&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1260.78,&quot;domainLookupStart&quot;:1260.78,&quot;domainLookupEnd&quot;:1260.78,&quot;connectStart&quot;:1260.78,&quot;connectEnd&quot;:1260.78,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1262.9050000000002,&quot;responseStart&quot;:1380.71,&quot;responseEnd&quot;:1398.17,&quot;transferSize&quot;:13955,&quot;encodedBodySize&quot;:13308,&quot;decodedBodySize&quot;:13308,&quot;name&quot;:&quot;https://assets-cdn.github.com/static/fonts/roboto/roboto-regular.woff&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1260.78,&quot;duration&quot;:137.3900000000001},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1302.0850000000003,&quot;domainLookupStart&quot;:1302.0850000000003,&quot;domainLookupEnd&quot;:1302.0850000000003,&quot;connectStart&quot;:1302.0850000000003,&quot;connectEnd&quot;:1302.0850000000003,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1747.1350000000002,&quot;responseStart&quot;:1882.98,&quot;responseEnd&quot;:1885.4750000000001,&quot;transferSize&quot;:21539,&quot;encodedBodySize&quot;:20922,&quot;decodedBodySize&quot;:20922,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/logos/airbnb-logo.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1302.0850000000003,&quot;duration&quot;:583.3899999999999},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1302.2450000000001,&quot;domainLookupStart&quot;:1302.2450000000001,&quot;domainLookupEnd&quot;:1302.2450000000001,&quot;connectStart&quot;:1302.2450000000001,&quot;connectEnd&quot;:1302.2450000000001,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1753.77,&quot;responseStart&quot;:1888.1800000000003,&quot;responseEnd&quot;:1893.3500000000001,&quot;transferSize&quot;:13638,&quot;encodedBodySize&quot;:13020,&quot;decodedBodySize&quot;:13020,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/logos/sap-logo.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1302.2450000000001,&quot;duration&quot;:591.105},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1302.3600000000001,&quot;domainLookupStart&quot;:1302.3600000000001,&quot;domainLookupEnd&quot;:1302.3600000000001,&quot;connectStart&quot;:1302.3600000000001,&quot;connectEnd&quot;:1302.3600000000001,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1817.775,&quot;responseStart&quot;:1936.005,&quot;responseEnd&quot;:1936.9050000000002,&quot;transferSize&quot;:9084,&quot;encodedBodySize&quot;:8466,&quot;decodedBodySize&quot;:8466,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/logos/ibm-logo.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1302.3600000000001,&quot;duration&quot;:634.5450000000001},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1302.48,&quot;domainLookupStart&quot;:1302.48,&quot;domainLookupEnd&quot;:1302.48,&quot;connectStart&quot;:1302.48,&quot;connectEnd&quot;:1302.48,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1831.39,&quot;responseStart&quot;:1951.54,&quot;responseEnd&quot;:1952.5800000000002,&quot;transferSize&quot;:7994,&quot;encodedBodySize&quot;:7378,&quot;decodedBodySize&quot;:7378,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/logos/google-logo.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1302.48,&quot;duration&quot;:650.1000000000001},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1302.585,&quot;domainLookupStart&quot;:1302.585,&quot;domainLookupEnd&quot;:1302.585,&quot;connectStart&quot;:1302.585,&quot;connectEnd&quot;:1302.585,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1887.345,&quot;responseStart&quot;:2007.4300000000003,&quot;responseEnd&quot;:2008.48,&quot;transferSize&quot;:25356,&quot;encodedBodySize&quot;:24740,&quot;decodedBodySize&quot;:24740,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/logos/paypal-logo.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1302.585,&quot;duration&quot;:705.895},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1302.68,&quot;domainLookupStart&quot;:1302.68,&quot;domainLookupEnd&quot;:1302.68,&quot;connectStart&quot;:1302.68,&quot;connectEnd&quot;:1302.68,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1894.6550000000002,&quot;responseStart&quot;:2010.3300000000002,&quot;responseEnd&quot;:2021.9,&quot;transferSize&quot;:19951,&quot;encodedBodySize&quot;:19335,&quot;decodedBodySize&quot;:19335,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/logos/bloomberg-logo.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1302.68,&quot;duration&quot;:719.22},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1302.8300000000002,&quot;domainLookupStart&quot;:1302.8300000000002,&quot;domainLookupEnd&quot;:1302.8300000000002,&quot;connectStart&quot;:1302.8300000000002,&quot;connectEnd&quot;:1302.8300000000002,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1938.295,&quot;responseStart&quot;:2052.1549999999997,&quot;responseEnd&quot;:2055.4900000000002,&quot;transferSize&quot;:20071,&quot;encodedBodySize&quot;:19454,&quot;decodedBodySize&quot;:19454,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/logos/spotify-logo.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1302.8300000000002,&quot;duration&quot;:752.6600000000001},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1302.93,&quot;domainLookupStart&quot;:1302.93,&quot;domainLookupEnd&quot;:1302.93,&quot;connectStart&quot;:1302.93,&quot;connectEnd&quot;:1302.93,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1953.4950000000001,&quot;responseStart&quot;:2070.885,&quot;responseEnd&quot;:2071.545,&quot;transferSize&quot;:21297,&quot;encodedBodySize&quot;:20681,&quot;decodedBodySize&quot;:20681,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/logos/swift-logo.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1302.93,&quot;duration&quot;:768.615},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1303.0300000000002,&quot;domainLookupStart&quot;:1303.0300000000002,&quot;domainLookupEnd&quot;:1303.0300000000002,&quot;connectStart&quot;:1303.0300000000002,&quot;connectEnd&quot;:1303.0300000000002,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:2010.6800000000003,&quot;responseStart&quot;:2107.78,&quot;responseEnd&quot;:2108.3,&quot;transferSize&quot;:2087,&quot;encodedBodySize&quot;:1472,&quot;decodedBodySize&quot;:1472,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/logos/facebook-logo.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1303.0300000000002,&quot;duration&quot;:805.27},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1303.125,&quot;domainLookupStart&quot;:1303.125,&quot;domainLookupEnd&quot;:1303.125,&quot;connectStart&quot;:1303.125,&quot;connectEnd&quot;:1303.125,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:2024.055,&quot;responseStart&quot;:2128.505,&quot;responseEnd&quot;:2134.565,&quot;transferSize&quot;:21851,&quot;encodedBodySize&quot;:21236,&quot;decodedBodySize&quot;:21236,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/logos/node-logo.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1303.125,&quot;duration&quot;:831.44},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1303.23,&quot;domainLookupStart&quot;:1303.23,&quot;domainLookupEnd&quot;:1303.23,&quot;connectStart&quot;:1303.23,&quot;connectEnd&quot;:1303.23,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:2057.6150000000002,&quot;responseStart&quot;:2152.93,&quot;responseEnd&quot;:2155.31,&quot;transferSize&quot;:17810,&quot;encodedBodySize&quot;:17194,&quot;decodedBodySize&quot;:17194,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/logos/nasa-logo.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1303.23,&quot;duration&quot;:852.0799999999999},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1303.335,&quot;domainLookupStart&quot;:1303.335,&quot;domainLookupEnd&quot;:1303.335,&quot;connectStart&quot;:1303.335,&quot;connectEnd&quot;:1303.335,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:2073.4350000000004,&quot;responseStart&quot;:2166.2200000000003,&quot;responseEnd&quot;:2169.14,&quot;transferSize&quot;:19967,&quot;encodedBodySize&quot;:19351,&quot;decodedBodySize&quot;:19351,&quot;name&quot;:&quot;https://assets-cdn.github.com/images/modules/site/logos/walmart-logo.png&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1303.335,&quot;duration&quot;:865.8049999999998},{&quot;initiatorType&quot;:&quot;script&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1303.45,&quot;domainLookupStart&quot;:1303.45,&quot;domainLookupEnd&quot;:1303.45,&quot;connectStart&quot;:1303.45,&quot;connectEnd&quot;:1303.45,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:1307.1050000000002,&quot;responseStart&quot;:1416.025,&quot;responseEnd&quot;:1441.48,&quot;transferSize&quot;:93332,&quot;encodedBodySize&quot;:92665,&quot;decodedBodySize&quot;:256473,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/frameworks-73353845059b604494bd29bc913b29ac45035dc2b0e14f9f9a12987fae52af59.js&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1303.45,&quot;duration&quot;:138.02999999999997},{&quot;initiatorType&quot;:&quot;script&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:1303.605,&quot;domainLookupStart&quot;:1303.605,&quot;domainLookupEnd&quot;:1303.605,&quot;connectStart&quot;:1303.605,&quot;connectEnd&quot;:1303.605,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:2109.82,&quot;responseStart&quot;:2205.67,&quot;responseEnd&quot;:3329.5450000000005,&quot;transferSize&quot;:190700,&quot;encodedBodySize&quot;:190031,&quot;decodedBodySize&quot;:644963,&quot;name&quot;:&quot;https://assets-cdn.github.com/assets/github-025672a52b980b3949e8952ccb1d1badad756e42ad42fca6a1a0002365a43c45.js&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:1303.605,&quot;duration&quot;:2025.9400000000005},{&quot;initiatorType&quot;:&quot;img&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:3436.1800000000003,&quot;domainLookupStart&quot;:0,&quot;domainLookupEnd&quot;:0,&quot;connectStart&quot;:0,&quot;connectEnd&quot;:0,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:0,&quot;responseStart&quot;:0,&quot;responseEnd&quot;:3670.32,&quot;transferSize&quot;:0,&quot;encodedBodySize&quot;:0,&quot;decodedBodySize&quot;:0,&quot;name&quot;:&quot;https://collector.githubapp.com/github/page_view?dimensions[page]=https://github.com/&amp;dimensions[title]=The world&apos;s leading software development platform · GitHub&amp;dimensions[referrer]=https://github.com/&amp;dimensions[user_agent]=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36&amp;dimensions[screen_resolution]=1680x1050&amp;dimensions[pixel_ratio]=1&amp;dimensions[browser_resolution]=1680x944&amp;dimensions[tz_seconds]=19800&amp;dimensions[timestamp]=1506678638663&amp;dimensions[request_id]=E1E4:8853:A792E51:FEBFDA9:59CE176B&amp;dimensions[region_edge]=sea&amp;dimensions[region_render]=iad&amp;&amp;measures[performance_timing]=1-1023-1023--1499-1497-1497-1028-1023-1023-1023---0-1023-2-489-1300-1021--1024-1024&amp;&amp;&amp;dimensions[cid]=510108878.1505741121&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:3436.1800000000003,&quot;duration&quot;:234.13999999999987},{&quot;initiatorType&quot;:&quot;beacon&quot;,&quot;nextHopProtocol&quot;:&quot;hq&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:0,&quot;redirectEnd&quot;:0,&quot;fetchStart&quot;:3462.3700000000003,&quot;domainLookupStart&quot;:0,&quot;domainLookupEnd&quot;:0,&quot;connectStart&quot;:0,&quot;connectEnd&quot;:0,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:0,&quot;responseStart&quot;:0,&quot;responseEnd&quot;:3566.13,&quot;transferSize&quot;:0,&quot;encodedBodySize&quot;:0,&quot;decodedBodySize&quot;:0,&quot;name&quot;:&quot;https://www.google-analytics.com/collect&quot;,&quot;entryType&quot;:&quot;resource&quot;,&quot;startTime&quot;:3462.3700000000003,&quot;duration&quot;:103.75999999999976}]},{&quot;navigationTimings&quot;:[{&quot;unloadEventStart&quot;:1023.965,&quot;unloadEventEnd&quot;:1023.965,&quot;domInteractive&quot;:1497.4050000000002,&quot;domContentLoadedEventStart&quot;:1497.4500000000003,&quot;domContentLoadedEventEnd&quot;:1499.8700000000001,&quot;domComplete&quot;:3670.815,&quot;loadEventStart&quot;:3670.8450000000003,&quot;loadEventEnd&quot;:3672.5000000000005,&quot;type&quot;:&quot;navigate&quot;,&quot;redirectCount&quot;:1,&quot;initiatorType&quot;:&quot;navigation&quot;,&quot;nextHopProtocol&quot;:&quot;http/1.1&quot;,&quot;workerStart&quot;:0,&quot;redirectStart&quot;:2.1950000000000003,&quot;redirectEnd&quot;:1023.4450000000002,&quot;fetchStart&quot;:1023.4450000000002,&quot;domainLookupStart&quot;:1023.4450000000002,&quot;domainLookupEnd&quot;:1023.4450000000002,&quot;connectStart&quot;:1023.4450000000002,&quot;connectEnd&quot;:1023.4450000000002,&quot;secureConnectionStart&quot;:0,&quot;requestStart&quot;:489.83500000000004,&quot;responseStart&quot;:1021.4000000000001,&quot;responseEnd&quot;:1300.7350000000001,&quot;transferSize&quot;:61233,&quot;encodedBodySize&quot;:56323,&quot;decodedBodySize&quot;:56323,&quot;name&quot;:&quot;https://github.com/logout&quot;,&quot;entryType&quot;:&quot;navigation&quot;,&quot;startTime&quot;:0,&quot;duration&quot;:3672.5000000000005}]}]}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">api.github.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">_private/browser/stats</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">true</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">2</stringProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://github.com</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://github.com/</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.8</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="RandomTimer.range">1290.0</stringProp>
+            <stringProp name="ConstantTimer.delay">2580.0</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename">C:\Users\ssaraf\Desktop\demo.csv</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">All threads</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">username,password</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="username" elementType="Argument">
+              <stringProp name="Argument.name">username</stringProp>
+              <stringProp name="Argument.value">ssaraf@tavisca.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="password" elementType="Argument">
+              <stringProp name="Argument.name">password</stringProp>
+              <stringProp name="Argument.value">Subham@123</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
